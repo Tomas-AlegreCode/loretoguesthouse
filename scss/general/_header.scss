@@ -86,3 +86,39 @@ header {
         margin-bottom: 20px; // Espacio debajo del título
     }
 }
+
+// Responsive HEADER
+@media (max-width: 992px) {
+  .header-top {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .logo-header img {
+    max-width: 120px;
+    height: auto;
+  }
+  .nav-header ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    min-height: 60vh;
+    padding: 10px;
+  }
+  .texto-header {
+    top: 55%;
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  .texto-header h1 {
+    font-size: 1.3rem;
+  }
+  .texto-header p {
+    font-size: 1rem;
+  }
+}
