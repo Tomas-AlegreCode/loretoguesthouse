@@ -1,0 +1,259 @@
+/*Reset css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Imagen de fondo Header*/
+header {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../img/habitaciones/sala-1.jpg");
+  background-size: cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+header > * {
+  position: relative;
+  z-index: 2;
+}
+
+/*Texto y nav bar*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.nav-header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-header li {
+  margin: 0 15px;
+}
+.nav-header a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+.nav-header a:hover {
+  color: #82C600;
+}
+
+.texto-header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+  font-size: 2.5rem;
+}
+.texto-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.texto-section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.texto-section1 p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.texto-section1 h2 {
+  font-size: 3rem;
+}
+
+.texto-habitaciones {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.texto-habitaciones > * {
+  position: relative;
+  z-index: 2;
+}
+
+.texto-habitaciones::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/habitaciones/martin-pescador.jpg");
+  background-size: cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.texto-section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.texto-section2 h2 {
+  color: #fff;
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+.texto-section2 p {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.btn-reserva {
+  display: block;
+  margin: 40px auto 40px auto;
+  width: fit-content;
+}
+
+.centrar-boton {
+  text-align: center;
+}
+
+.texto-areas-comunes {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.texto-areas-comunes > * {
+  position: relative;
+  z-index: 2;
+}
+
+.texto-areas-comunes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/habitaciones/sala-5.jpg");
+  background-size: cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.texto-section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.texto-section4 h2 {
+  color: #fff;
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+.texto-section4 p {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.parrafo-areas-comunes {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+.carousel-slide {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.carousel-slide .carousel-inner,
+.carousel-slide .carousel-item,
+.carousel-slide img {
+  height: 500px;
+}
+
+.carousel-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
