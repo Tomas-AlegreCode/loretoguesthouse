@@ -122,3 +122,48 @@ header {
     font-size: 1rem;
   }
 }
+
+// Oculta el menú hamburguesa en tablet y PC, solo visible en celulares
+.menu-hamburguesa {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .menu-hamburguesa {
+    display: block;
+  }
+  .nav-header {
+    display: none;
+  }
+}
+
+// Muestra el nav-header solo en tablet y PC
+@media (min-width: 768px) {
+  .nav-header {
+    display: block;
+  }
+  .menu-hamburguesa {
+    display: none;
+  }
+}
+
+// Por defecto (PC y tablet ≥768px): horizontal
+.nav-header ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+// Solo en celulares (<768px): vertical
+@media (max-width: 767.98px) {
+  .nav-header ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
