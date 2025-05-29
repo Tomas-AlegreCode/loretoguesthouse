@@ -1,0 +1,60 @@
+.titulo-habitaciones {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    margin-top: 40px;
+}
+
+.parrafo-habitaciones {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Estilos personalizados */
+.text-primary {
+  color: #2c7a47 !important; /* Verde Loreto */
+}
+
+.btn-outline-primary {
+  color: #2c7a47;
+  border-color: #2c7a47;
+  transition: all 0.3s;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2c7a47;
+  color: white;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Para destacar el texto contra las imágenes */
+@media (min-width: 768px) {
+  .col-md-4 {
+    padding-right: 3rem !important;
+  }
+}
+
+/* Efecto al pasar el mouse */
+a[data-lightbox] img {
+  transition: transform 0.3s;
+}
+
+a[data-lightbox] img:hover {
+  transform: scale(1.02);
+  cursor: zoom-in;
+}
+
+/* Estilo del lightbox */
+.lightbox .lb-image {
+  border: 10px solid white;
+  border-radius: 3px;
+}

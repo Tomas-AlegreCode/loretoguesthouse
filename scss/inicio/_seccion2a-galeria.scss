@@ -1,0 +1,17 @@
+//seccion 3: cards
+.card-img-top {
+    height: 400px;      // Ajusta la altura según prefieras
+    object-fit: cover;  // Mantiene la proporción y recorta si es necesario
+    width: 100%;        // Asegura que ocupe todo el ancho de la card
+    display: block;
+}
+
+.btn-reserva {
+    display: block;
+    margin: 40px auto 40px auto; // 40px arriba y abajo, centrado
+    width: fit-content;          // El ancho se ajusta al contenido
+}
+
+.centrar-boton {
+    text-align: center;
+}

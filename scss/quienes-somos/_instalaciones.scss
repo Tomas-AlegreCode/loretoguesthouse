@@ -1,0 +1,64 @@
+/*Instalaciones*/
+.titulo-instalaciones {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    margin-bottom: 0.5em;
+
+    // El contenido queda por encima del fondo
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.titulo-instalaciones::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('../../img/habitaciones/sala-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; // Hace que el fondo se mueva al scrollear
+    z-index: 1;
+    pointer-events: none;
+}
+
+.instalaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px; // Espacio entre h2 y p
+    margin: 40px 0; // Espacio entre el título y el párrafo
+}
+
+.titulo-instalaciones h2 {
+    color: #fff;
+    font-size: 5rem; // Ajusta el tamaño según prefieras
+    margin-bottom: 0.5em;
+}
+
+.lista-instalaciones ul {
+    list-style: none;
+}
+
+.instalaciones li {
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+
+

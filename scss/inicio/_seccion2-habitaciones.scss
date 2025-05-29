@@ -1,0 +1,50 @@
+//seccion 2
+.texto-habitaciones {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; // Ajusta la altura según prefieras
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // El contenido debe estar por encima del fondo
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.texto-habitaciones::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('../img/habitaciones/martin-pescador.jpg');
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; // Hace que el fondo se mueva al hacer scroll
+    z-index: 1;
+}
+
+.texto-section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px; // Espacio entre h2 y p
+}
+
+.texto-section2 h2 {
+    color: #fff;
+    font-size: 5rem; // Ajusta el tamaño según prefieras
+    margin-bottom: 0.5em;
+}
+
+.texto-section2 p {
+    color: #fff;
+    font-size: 1.5rem; // Ajusta el tamaño según prefieras
+    margin-top: 0;
+}

@@ -1,0 +1,18 @@
+//seccion 5: carrusel areas comunes
+.carousel-slide {
+    max-width: 900px;      // Opcional: limita el ancho del carousel
+    margin: 40px auto;        // Centra el carousel
+}
+
+.carousel-slide .carousel-inner,
+.carousel-slide .carousel-item,
+.carousel-slide img {
+    height: 500px;         // Ajusta la altura según prefieras
+}
+
+.carousel-slide img {
+    object-fit: cover;     // Recorta la imagen para que llene el espacio sin deformarse
+    width: 100%;
+    height: 100%;
+    display: block;
+}

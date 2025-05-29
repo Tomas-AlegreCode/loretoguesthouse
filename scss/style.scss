@@ -4,5 +4,35 @@
 //import header
 @import "./general/header";
 
-//import main
-@import "./general/main";
+//import footer
+@import "./general/footer";
+
+//import seccion 1
+@import "../scss/inicio/seccion1-texto";
+
+//import seccion 2 
+@import "../scss/inicio/seccion2-habitaciones";
+
+//import seccion 2a 
+@import "../scss/inicio/seccion2a-galeria";
+
+//import seccion 3
+@import "../scss/inicio/seccion3-areascomunes";
+
+//import seccion 3a
+@import "../scss/inicio/seccion3a-texto";
+
+//import seccion 3b
+@import "../scss/inicio/seccion3b-galeria";
+
+//import mq
+@import "./general/mq";
+
+//import quienes-somos
+@import "./quienes-somos/texto-principal";
+
+//import instalaciones
+@import "./quienes-somos/instalaciones";
+
+//import habitaciones 
+@import "./habitaciones/titulo-parrafo";
