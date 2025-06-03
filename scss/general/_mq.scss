@@ -22,6 +22,20 @@
   .btn-group {
     display: block;
     margin-top: 16px; // opcional: separa del header
+    width: 90vw;
+    max-width: 350px;
+    margin: 16px auto 0 auto;
+    font-size: 1.2rem;
+  }
+  .btn-group .btn {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 12px 0;
+  }
+  .dropdown-menu {
+    width: 100%;
+    min-width: unset;
+    font-size: 1.1rem;
   }
 }
 
@@ -107,7 +121,20 @@
 
 @media (max-width: 767.98px) {
   .logo-header img {
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 180px;
+    max-height: 180px;
+  }
+}
+
+/* --- TITULOS h2 --- */
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+  h2 {
+    font-size: 2rem;
   }
 }
