@@ -25,7 +25,7 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./img/habitaciones/pileta-patio.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../img/pileta-patio.jpg");
   background-size: cover;
   background-position: 50% 30%;
   background-repeat: no-repeat;
