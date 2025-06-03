@@ -1,0 +1,58 @@
+.titulo-direccion, .parrafo-direccion {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Sobrescribe el h2 de Bootstrap */
+h2 {
+  font-size: 2.2rem !important; /* Tamaño personalizado */
+  font-weight: 600 !important;
+}
+
+/* Versión responsiva */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/*maps*/
+.mapa-direccion {
+    margin:20px;
+}
+
+.map-container {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    overflow: hidden;
+    margin-top: 16px;
+}
+/*Contacto*/
+ .direccion-contacto .row {
+  min-height: 455px;
+  align-items: center;
+}
+
+
+// .titulo-lista {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start; // Alinea h2 y ul a la izquierda
+//   width: 100%;
+
+//   h2 {
+//     text-align: left;
+//     width: 100%;
+//   }
+
+ul {
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+  width: 100%;
+}
+
+//   ul li {
+//     margin-bottom: 16px;
+//   }
+// }

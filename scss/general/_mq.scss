@@ -1,81 +1,103 @@
-/*Medias query HEADER*/
-@media (max-width: 992px) {
-  .header-top {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  .logo-header img {
-    max-width: 120px;
-    height: auto;
-  }
-  .nav-header ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+/* --- GENERAL --- */
+
+/* Márgenes laterales en párrafos del index */
+@media (max-width: 767.98px) {
+  .texto-section1 p,
+  .texto-section2 p,
+  .texto-section4 p,
+  .parrafo-areas-comunes p {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
-@media (max-width: 768px) {
-  header {
-    min-height: 60vh;
-    padding: 10px;
+/* --- MENÚ HAMBURGUESA (btn-group) --- */
+
+/* Ocultar btn-group en desktop, mostrar en mobile */
+.btn-group {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .btn-group {
+    display: block;
+    margin-top: 16px; // opcional: separa del header
   }
-  .texto-header {
-    top: 55%;
-    font-size: 1.1rem;
-    padding: 0 10px;
+}
+
+/* --- NAV HEADER --- */
+
+/* Mostrar nav-header solo en desktop */
+.nav-header {
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .nav-header {
+    display: none;
   }
-  .texto-header h1 {
-    font-size: 1.3rem;
+}
+
+/* --- CARDS Y GALERÍAS --- */
+
+.card-img-top,
+.carousel-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .card-img-top,
+  .carousel-item img {
+    height: 140px;
+  }
+}
+
+/* --- SECCIONES Y CONTENEDORES --- */
+
+/* Márgenes laterales para secciones principales en mobile */
+@media (max-width: 767.98px) {
+  .container,
+  .container-fluid,
+  .direccion-contacto,
+  .map-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* --- COLUMNAS EN SECCIONES DE CONTACTO Y MAPA --- */
+
+/* En mobile, columnas una debajo de la otra */
+@media (max-width: 767.98px) {
+  .direccion-contacto .row {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .direccion-contacto .col-md-6 {
+    max-width: 100%;
+  }
+}
+
+/* --- TEXTO HEADER Y SECCIONES --- */
+
+@media (max-width: 767.98px) {
+  .texto-header h1,
+  .texto-section2 h2,
+  .texto-section4 h2 {
+    font-size: 1.5rem;
   }
   .texto-header p {
     font-size: 1rem;
   }
 }
 
-// Oculta el menú hamburguesa en tablet y PC, solo visible en celulares
-.menu-hamburguesa {
-  display: none;
-}
+/* --- LOGO HEADER --- */
 
 @media (max-width: 767.98px) {
-  .menu-hamburguesa {
-    display: block;
-        margin-top: -15px; // Ajusta el valor según prefieras
-  }
-  .nav-header {
-    display: none;
-  }
-}
-
-// Muestra el nav-header solo en tablet y PC
-@media (min-width: 768px) {
-  .nav-header {
-    display: block;
-  }
-  .menu-hamburguesa {
-    display: none;
-  }
-}
-
-// Por defecto (PC y tablet ≥768px): horizontal
-.nav-header ul {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-}
-
-// Solo en celulares (<768px): vertical
-@media (max-width: 767.98px) {
-  .nav-header ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
+  .logo-header img {
+    max-width: 120px;
+    max-height: 120px;
   }
 }

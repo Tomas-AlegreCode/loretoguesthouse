@@ -8,12 +8,14 @@
 
 /*Imagen de fondo Header*/
 header {
-  position: relative;
   width: 100vw;
-  min-height: 100vh;
-  padding: 20px;
-  color: white;
-  overflow: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
+  color: antiquewhite;
 }
 
 header::before {
@@ -23,7 +25,7 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../img/habitaciones/pileta-patio.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/habitaciones/pileta-patio.jpg");
   background-size: cover;
   background-position: 50% 30%;
   background-repeat: no-repeat;
@@ -95,6 +97,57 @@ header {
   margin-bottom: 20px;
 }
 
+/* Estilo del menú hamburguesa */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Fondo transparente */
+.bg-transparent {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+/* Efecto hover elegante */
+.hover-effect {
+  position: relative;
+  padding: 12px 20px;
+  color: #2c7a47 !important; /* Verde Loreto */
+  font-weight: 600;
+  transition: all 0.4s;
+}
+.hover-effect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: #f6ad37; /* Dorado Loreto */
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+.hover-effect:hover {
+  background: rgba(44, 122, 71, 0.1); /* Verde claro */
+}
+.hover-effect:hover::before {
+  transform: scaleX(1);
+}
+
+/* Menú en móviles */
+@media (max-width: 991px) {
+  #menuLoreto {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    z-index: 1000;
+  }
+}
 /*Footer*/
 footer {
   background-color: #333;
@@ -133,6 +186,34 @@ footer img {
 
 .texto-section1 h2 {
   font-size: 3rem;
+}
+
+/*Boton de reserva*/
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #25D366;
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 50px; /* Bordes muy redondeados */
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.whatsapp-btn i {
+  font-size: 1.4rem;
+}
+.whatsapp-btn:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.whatsapp-btn:active {
+  transform: scale(0.98);
 }
 
 .texto-habitaciones {
@@ -278,77 +359,92 @@ footer img {
   display: block;
 }
 
-/*Medias query HEADER*/
-@media (max-width: 992px) {
-  .header-top {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  .logo-header img {
-    max-width: 120px;
-    height: auto;
-  }
-  .nav-header ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+/* --- GENERAL --- */
+/* Márgenes laterales en párrafos del index */
+@media (max-width: 767.98px) {
+  .texto-section1 p,
+  .texto-section2 p,
+  .texto-section4 p,
+  .parrafo-areas-comunes p {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
-@media (max-width: 768px) {
-  header {
-    min-height: 60vh;
-    padding: 10px;
+/* --- MENÚ HAMBURGUESA (btn-group) --- */
+/* Ocultar btn-group en desktop, mostrar en mobile */
+.btn-group {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .btn-group {
+    display: block;
+    margin-top: 16px;
   }
-  .texto-header {
-    top: 55%;
-    font-size: 1.1rem;
-    padding: 0 10px;
+}
+/* --- NAV HEADER --- */
+/* Mostrar nav-header solo en desktop */
+.nav-header {
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .nav-header {
+    display: none;
   }
-  .texto-header h1 {
-    font-size: 1.3rem;
+}
+/* --- CARDS Y GALERÍAS --- */
+.card-img-top,
+.carousel-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .card-img-top,
+  .carousel-item img {
+    height: 140px;
+  }
+}
+/* --- SECCIONES Y CONTENEDORES --- */
+/* Márgenes laterales para secciones principales en mobile */
+@media (max-width: 767.98px) {
+  .container,
+  .container-fluid,
+  .direccion-contacto,
+  .map-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+/* --- COLUMNAS EN SECCIONES DE CONTACTO Y MAPA --- */
+/* En mobile, columnas una debajo de la otra */
+@media (max-width: 767.98px) {
+  .direccion-contacto .row {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .direccion-contacto .col-md-6 {
+    max-width: 100%;
+  }
+}
+/* --- TEXTO HEADER Y SECCIONES --- */
+@media (max-width: 767.98px) {
+  .texto-header h1,
+  .texto-section2 h2,
+  .texto-section4 h2 {
+    font-size: 1.5rem;
   }
   .texto-header p {
     font-size: 1rem;
   }
 }
-.menu-hamburguesa {
-  display: none;
-}
-
+/* --- LOGO HEADER --- */
 @media (max-width: 767.98px) {
-  .menu-hamburguesa {
-    display: block;
-    margin-top: -15px;
-  }
-  .nav-header {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .nav-header {
-    display: block;
-  }
-  .menu-hamburguesa {
-    display: none;
-  }
-}
-.nav-header ul {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 767.98px) {
-  .nav-header ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
+  .logo-header img {
+    max-width: 120px;
+    max-height: 120px;
   }
 }
 .texto-principal {
@@ -491,6 +587,96 @@ a[data-lightbox] img:hover {
 .lightbox .lb-image {
   border: 10px solid white;
   border-radius: 3px;
+}
+
+.titulo-direccion, .parrafo-direccion {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Sobrescribe el h2 de Bootstrap */
+h2 {
+  font-size: 2.2rem !important; /* Tamaño personalizado */
+  font-weight: 600 !important;
+}
+
+/* Versión responsiva */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem !important;
+  }
+}
+/*maps*/
+.mapa-direccion {
+  margin: 20px;
+}
+
+.map-container {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+/*Contacto*/
+.direccion-contacto .row {
+  min-height: 455px;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+  width: 100%;
+}
+
+.activity-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  margin-top: 10px;
+  transition: transform 0.3s;
+}
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+.activity-card .activity-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.activity-card .activity-body {
+  padding: 1.5rem;
+  background: white;
+}
+.activity-card .activity-body h3 {
+  color: #2c7a47;
+  font-size: 1.5rem;
+}
+
+.btn-eco {
+  background: #2c7a47;
+  border: none;
+  padding: 10px 25px;
+}
+
+.highlight-box {
+  background: #f8f4e5;
+  padding: 12px;
+  border-left: 4px solid #f6ad37;
+}
+
+.activity-tags {
+  display: flex;
+  gap: 10px;
+}
+.activity-tags .tag {
+  background: #e8f5e9;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=main.css.map */

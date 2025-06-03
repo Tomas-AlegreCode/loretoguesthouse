@@ -1,11 +1,13 @@
 /*Imagen de fondo Header*/
 header {
-    position: relative;
-    width: 100vw;
-    min-height: 100vh;
-    padding: 20px;
-    color: white;
-    overflow: hidden; // Evita desbordes del pseudo-elemento
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
+  color: antiquewhite;
 }
 
 header::before {
@@ -93,4 +95,58 @@ header {
         font-size: 3.5rem; // Tamaño del título principal
         margin-bottom: 20px; // Espacio debajo del título
     }
+}
+
+/* Estilo del menú hamburguesa */
+.navbar-toggler {
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+/* Fondo transparente */
+.bg-transparent {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+/* Efecto hover elegante */
+.hover-effect {
+  position: relative;
+  padding: 12px 20px;
+  color: #2c7a47 !important; /* Verde Loreto */
+  font-weight: 600;
+  transition: all 0.4s;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: #f6ad37; /* Dorado Loreto */
+    transform: scaleX(0);
+    transition: transform 0.4s;
+  }
+  
+  &:hover {
+    background: rgba(44, 122, 71, 0.1); /* Verde claro */
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* Menú en móviles */
+@media (max-width: 991px) {
+  #menuLoreto {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    z-index: 1000;
+  }
 }
