@@ -407,9 +407,11 @@ footer img {
 }
 
 @media (max-width: 767.98px) {
-  .card-img-top,
-  .carousel-item img {
+  .card-img-top {
     height: 140px;
+  }
+  .carousel-item img {
+    height: 100%;
   }
 }
 /* --- SECCIONES Y CONTENEDORES --- */
