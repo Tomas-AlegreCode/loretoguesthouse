@@ -371,7 +371,6 @@ footer img {
   }
 }
 /* --- MENÚ HAMBURGUESA (btn-group) --- */
-/* Ocultar btn-group en desktop, mostrar en mobile */
 .btn-group {
   display: none;
 }
@@ -379,10 +378,9 @@ footer img {
 @media (max-width: 991.98px) {
   .btn-group {
     display: block;
-    margin-top: 20px;
     width: 90vw;
     max-width: 350px;
-    margin: 16px auto 0 auto;
+    margin: 32px auto 0 auto;
     font-size: 1.2rem;
   }
   .btn-group .btn {
@@ -397,7 +395,6 @@ footer img {
   }
 }
 /* --- NAV HEADER --- */
-/* Mostrar nav-header solo en desktop */
 .nav-header {
   display: block;
 }
@@ -408,28 +405,26 @@ footer img {
   }
 }
 /* --- CARDS Y GALERÍAS --- */
-.card-img-top {
+.card-img-top,
+.carousel-item img {
   width: 100%;
-  height: 220px;
   object-fit: cover;
 }
 
+.card-img-top {
+  height: 220px;
+}
+
 .carousel-item img {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 @media (max-width: 767.98px) {
   .card-img-top {
     height: 140px;
   }
-  .carousel-item img {
-    height: 100%;
-  }
 }
 /* --- SECCIONES Y CONTENEDORES --- */
-/* Márgenes laterales para secciones principales en mobile */
 @media (max-width: 767.98px) {
   .container,
   .container-fluid,
@@ -440,7 +435,6 @@ footer img {
   }
 }
 /* --- COLUMNAS EN SECCIONES DE CONTACTO Y MAPA --- */
-/* En mobile, columnas una debajo de la otra */
 @media (max-width: 767.98px) {
   .direccion-contacto .row {
     flex-direction: column;
@@ -456,13 +450,18 @@ footer img {
   .texto-section2 h2,
   .texto-section4 h2 {
     font-size: 1.5rem;
+    margin-top: 32px;
   }
   .texto-header p {
     font-size: 1rem;
+    margin-top: 32px;
   }
 }
 /* --- LOGO HEADER --- */
 @media (max-width: 767.98px) {
+  .logo-header {
+    margin-top: 32px;
+  }
   .logo-header img {
     max-width: 180px;
     max-height: 180px;
@@ -477,6 +476,31 @@ h2 {
 @media (max-width: 767.98px) {
   h2 {
     font-size: 2rem;
+  }
+}
+/* --- AJUSTES PARA PANTALLAS GRANDES --- */
+@media (min-width: 992px) {
+  .texto-section1 h2,
+  .texto-section2 h2,
+  .texto-section4 h2 {
+    font-size: 3rem !important;
+  }
+  .texto-section1 p,
+  .texto-section2 p,
+  .texto-section4 p {
+    font-size: 1.5rem !important;
+  }
+  .texto-quienes-somos h2,
+  .texto-quienes-somos .titulo-quienes,
+  .texto-quienes-somos .titulo-mision,
+  .texto-quienes-somos .titulo-vision {
+    font-size: 3rem !important;
+  }
+  .texto-quienes-somos p,
+  .texto-quienes-somos .parrafo-quienes,
+  .texto-quienes-somos .parrafo-mision,
+  .texto-quienes-somos .parrafo-vision {
+    font-size: 1.5rem !important;
   }
 }
 .texto-principal {
