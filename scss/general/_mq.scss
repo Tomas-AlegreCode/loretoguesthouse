@@ -110,14 +110,15 @@
     margin-top: 32px;
   }
   .logo-header img {
-    max-width: 180px;
-    max-height: 180px;
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin-top: 32px;
   }
 }
 
 /* --- TITULOS h2 --- */
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -131,13 +132,17 @@ h2 {
 @media (min-width: 992px) {
   .texto-section1 h2,
   .texto-section2 h2,
-  .texto-section4 h2 {
-    font-size: 3rem !important;
+  .texto-section4 h2,
+  .titulo-principal,
+  .titulo-instalaciones h2 {
+    font-size: 4rem !important;
   }
   .texto-section1 p,
   .texto-section2 p,
-  .texto-section4 p {
-    font-size: 1.5rem !important;
+  .texto-section4 p
+  .parrafo-areas-comunes p
+  .parrafo-principal {
+    font-size: 2rem !important;
   }
   .texto-quienes-somos h2,
   .texto-quienes-somos .titulo-quienes,
@@ -149,6 +154,61 @@ h2 {
   .texto-quienes-somos .parrafo-quienes,
   .texto-quienes-somos .parrafo-mision,
   .texto-quienes-somos .parrafo-vision {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Logo más grande */
+  .logo-header img {
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin-top: 0px;
+  }
+
+  /* Botón (btn-group) más abajo */
+  .btn-group {
+    margin-top: 0px !important;
+  }
+
+  /* Texto del header más grande */
+  .texto-header h1 {
+    font-size: 2.8rem !important;
+    margin-top: 32px;
+  }
+  .texto-header p {
+    font-size: 1.8rem !important;
+    margin-top: 24px;
+  }
+
+  /* Imagen del header más corta */
+  .header-img,
+  .header-image {
+    min-height: 100px !important;
+    height: 100px !important;
+    max-height: 100px !important;
+  }
+}
+
+/* --- HAMBURGUESA --- */
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-header {
+    margin-bottom: 8px;
+  }
+  .hamburger {
+    display: block;
+    margin-bottom: 16px;
+    margin-top: 0;
+    align-self: center;
+    position: static;
   }
 }

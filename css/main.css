@@ -50,7 +50,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 10px;
   width: 100%;
   margin-top: 40px;
 }
@@ -328,8 +328,12 @@ footer img {
 
 .texto-section4 p {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 0;
+}
+
+.parrafo-areas-comunes p {
+  font-size: 1.8rem;
 }
 
 .parrafo-areas-comunes {
@@ -463,13 +467,14 @@ footer img {
     margin-top: 32px;
   }
   .logo-header img {
-    max-width: 180px;
-    max-height: 180px;
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin-top: 32px;
   }
 }
 /* --- TITULOS h2 --- */
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -482,13 +487,15 @@ h2 {
 @media (min-width: 992px) {
   .texto-section1 h2,
   .texto-section2 h2,
-  .texto-section4 h2 {
-    font-size: 3rem !important;
+  .texto-section4 h2,
+  .titulo-principal,
+  .titulo-instalaciones h2 {
+    font-size: 4rem !important;
   }
   .texto-section1 p,
   .texto-section2 p,
-  .texto-section4 p {
-    font-size: 1.5rem !important;
+  .texto-section4 p .parrafo-areas-comunes p .parrafo-principal {
+    font-size: 2rem !important;
   }
   .texto-quienes-somos h2,
   .texto-quienes-somos .titulo-quienes,
@@ -500,7 +507,57 @@ h2 {
   .texto-quienes-somos .parrafo-quienes,
   .texto-quienes-somos .parrafo-mision,
   .texto-quienes-somos .parrafo-vision {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 767.98px) {
+  /* Logo más grande */
+  .logo-header img {
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin-top: 0px;
+  }
+  /* Botón (btn-group) más abajo */
+  .btn-group {
+    margin-top: 0px !important;
+  }
+  /* Texto del header más grande */
+  .texto-header h1 {
+    font-size: 2.8rem !important;
+    margin-top: 32px;
+  }
+  .texto-header p {
+    font-size: 1.8rem !important;
+    margin-top: 24px;
+  }
+  /* Imagen del header más corta */
+  .header-img,
+  .header-image {
+    min-height: 100px !important;
+    height: 100px !important;
+    max-height: 100px !important;
+  }
+}
+/* --- HAMBURGUESA --- */
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-header {
+    margin-bottom: 8px;
+  }
+  .hamburger {
+    display: block;
+    margin-bottom: 16px;
+    margin-top: 0;
+    align-self: center;
+    position: static;
   }
 }
 .texto-principal {
@@ -517,7 +574,7 @@ h2 {
 
 .texto-principal p {
   line-height: 2;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .texto-principal h2 {
@@ -572,17 +629,18 @@ h2 {
 
 .titulo-instalaciones h2 {
   color: #fff;
-  font-size: 5rem;
+  font-size: 3rem;
   margin-bottom: 0.5em;
 }
 
 .lista-instalaciones ul {
   list-style: none;
+  margin-bottom: 2rem;
 }
 
 .instalaciones li {
   line-height: 2;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .titulo-habitaciones {
@@ -651,18 +709,6 @@ a[data-lightbox] img:hover {
   text-align: center;
 }
 
-/* Sobrescribe el h2 de Bootstrap */
-h2 {
-  font-size: 2.2rem !important; /* Tamaño personalizado */
-  font-weight: 600 !important;
-}
-
-/* Versión responsiva */
-@media (max-width: 768px) {
-  h2 {
-    font-size: 1.8rem !important;
-  }
-}
 /*maps*/
 .mapa-direccion {
   margin: 20px;
@@ -685,6 +731,7 @@ ul {
   margin: 20px 0 0 0;
   padding: 0;
   width: 100%;
+  line-height: 2rem;
 }
 
 .activity-card {
@@ -694,6 +741,8 @@ ul {
   margin-bottom: 2rem;
   margin-top: 10px;
   transition: transform 0.3s;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .activity-card:hover {
   transform: translateY(-5px);
@@ -733,6 +782,110 @@ ul {
   padding: 3px 10px;
   border-radius: 20px;
   font-size: 0.8rem;
+}
+
+.hamburger {
+  background-color: transparent;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index: 1002;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamburger.is-active {
+  background-color: none;
+}
+
+._layer {
+  background-color: #009F00;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  width: 28px;
+  height: 4px;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger:hover .-top {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.hamburger:hover .-bottom {
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.hamburger.is-active .-top {
+  -webkit-transform: translateY(200%) rotate(45deg) !important;
+  -ms-transform: translateY(200%) rotate(45deg) !important;
+  transform: translateY(200%) rotate(45deg) !important;
+}
+
+.hamburger.is-active .-mid {
+  opacity: 0;
+}
+
+.hamburger.is-active .-bottom {
+  -webkit-transform: translateY(-200%) rotate(135deg) !important;
+  -ms-transform: translateY(-200%) rotate(135deg) !important;
+  transform: translateY(-200%) rotate(135deg) !important;
+}
+
+.menuppal.is_active {
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.menuppal {
+  background-color: rgba(255, 255, 255, 0.95);
+  bottom: 0;
+  height: 50%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  transform: translate3d(0px, -100%, 0px);
+  transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+  width: 100%;
+  z-index: 1001;
+}
+
+.menuppal ul {
+  margin: 5;
+  padding: 0;
+}
+
+.menuppal ul li {
+  list-style: none;
+  text-align: center;
+  font-family: Verdadna, Arial, Helvetica;
+  font-size: 1.5rem;
+  line-height: 5px;
+  height: 3em;
+  color: #369;
+  text-transform: none;
+  font-weight: bold;
+}
+
+.menuppal ul li a {
+  text-decoration: none;
+  color: #369;
+}
+
+.menuppal ul li a:hover {
+  text-decoration: none;
+  color: #333;
 }
 
 /*# sourceMappingURL=main.css.map */
