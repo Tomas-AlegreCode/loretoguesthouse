@@ -806,6 +806,7 @@ ul {
 
 .hamburger.is-active {
   background-color: none;
+  margin-top: 3rem;
 }
 
 ._layer {
@@ -856,7 +857,7 @@ ul {
 .menuppal {
   background-color: rgba(255, 255, 255, 0.95);
   bottom: 0;
-  height: 50%;
+  height: 57%;
   left: 0;
   overflow-y: scroll;
   position: fixed;
@@ -877,7 +878,6 @@ ul {
   text-align: center;
   font-family: Verdadna, Arial, Helvetica;
   font-size: 1.5rem;
-  line-height: 5px;
   height: 3em;
   color: #369;
   text-transform: none;
