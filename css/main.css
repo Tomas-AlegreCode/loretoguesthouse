@@ -25,7 +25,7 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/pileta-patio.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/pileta-patio-compress.jpg");
   background-size: cover;
   background-position: 50% 30%;
   background-repeat: no-repeat;
@@ -374,6 +374,12 @@ footer img {
     margin-right: 15px;
   }
 }
+/* Márgenes en lista de instalaciones */
+@media (max-width: 767.98px) {
+  .lista-instalaciones ul {
+    padding: 10px;
+  }
+}
 /* --- MENÚ HAMBURGUESA (btn-group) --- */
 .btn-group {
   display: none;
@@ -453,7 +459,7 @@ footer img {
   .texto-header h1,
   .texto-section2 h2,
   .texto-section4 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 32px;
   }
   .texto-header p {
@@ -490,7 +496,7 @@ h2 {
   .texto-section4 h2,
   .titulo-principal,
   .titulo-instalaciones h2 {
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
   }
   .texto-section1 p,
   .texto-section2 p,
@@ -574,7 +580,7 @@ h2 {
 
 .texto-principal p {
   line-height: 2;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .texto-principal h2 {
@@ -608,7 +614,7 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/habitaciones/sala-1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/sala-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -640,7 +646,7 @@ h2 {
 
 .instalaciones li {
   line-height: 2;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .titulo-habitaciones {
@@ -886,6 +892,17 @@ ul {
 .menuppal ul li a:hover {
   text-decoration: none;
   color: #333;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
 }
 
 /*# sourceMappingURL=main.css.map */

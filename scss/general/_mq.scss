@@ -11,6 +11,13 @@
   }
 }
 
+/* Márgenes en lista de instalaciones */
+@media (max-width: 767.98px) {
+  .lista-instalaciones ul {
+    padding: 10px;
+  }
+}
+
 /* --- MENÚ HAMBURGUESA (btn-group) --- */
 .btn-group {
   display: none;
@@ -95,7 +102,7 @@
   .texto-header h1,
   .texto-section2 h2,
   .texto-section4 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 32px;
   }
   .texto-header p {
@@ -135,7 +142,7 @@ h2 {
   .texto-section4 h2,
   .titulo-principal,
   .titulo-instalaciones h2 {
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
   }
   .texto-section1 p,
   .texto-section2 p,
