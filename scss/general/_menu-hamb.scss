@@ -14,7 +14,7 @@
 }
 .hamburger.is-active{
   background-color:none;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 ._layer{
 	background-color: #009F00;
@@ -58,7 +58,7 @@
 .menuppal{
    background-color: rgba(255, 255, 255, 0.95);
     bottom: 0;
-    height: 57%;
+    height: 45%;
     left: 0;
     overflow-y: scroll;
     position: fixed;
@@ -69,7 +69,8 @@
     z-index: 1001;
 }
 .menuppal ul{
-  margin:5;padding:0;
+	margin:5;
+	padding:0;
 }
 .menuppal ul li { 
   list-style: none;
