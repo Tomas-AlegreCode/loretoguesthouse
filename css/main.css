@@ -481,7 +481,7 @@ footer img {
 }
 /* --- TITULOS h2 --- */
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -581,11 +581,12 @@ h2 {
 
 .texto-principal p {
   line-height: 2;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .texto-principal h2 {
   font-size: 3rem;
+  margin: 40px;
 }
 
 /*Instalaciones*/
@@ -663,7 +664,7 @@ h2 {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 40px;
 }
@@ -904,6 +905,31 @@ ul {
   text-align: center;
   color: #FFF;
   font-size: 3em;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- icono del sitio -->
     <link
       rel="icon"
@@ -87,8 +90,8 @@
 
       <!-- Titulo -->
       <div class="texto-header">
-        <h1>HABITACIONES</h1>
-        <p>
+        <h1 data-aos="zoom-in">HABITACIONES</h1>
+        <p data-aos="zoom-in">
           Conocé nuestras habitaciones y elegí la que más te guste <br />
           para disfrutar de una estadía única.
         </p>
@@ -98,20 +101,20 @@
     <!-- principal -->
     <main>
       <div class="titulo-habitaciones">
-        <h2>
+        <h2 data-aos="zoom-in-down">
           Podes elegir entre tres opciones, <br />
           con temacias locales
         </h2>
       </div>
       <div class="parrafo-habitaciones">
-        <p>
+        <p data-aos="zoom-in-down">
           Todas las habitaciones cuentan con baño privado, aire acondicionado y
           Wi-Fi
         </p>
       </div>
       <!-- Yetapa -->
       <div class="container py-5">
-        <div class="row align-items-center">
+        <div class="row align-items-center" data-aos="fade-right">
           <!-- Columna izquierda (Fotos) -->
           <div class="col-md-8">
             <div class="row g-3">
@@ -185,7 +188,7 @@
 
       <!-- Martin pescador -->
       <div class="container py-5">
-        <div class="row align-items-center">
+        <div class="row align-items-center"  data-aos="fade-left">
           <!-- Columna izquierda (Texto) -->
           <div class="col-md-4 order-md-1 order-2">
             <!-- Cambio de orden -->
@@ -262,7 +265,7 @@
 
       <!-- Jabiru-->
       <div class="container py-5">
-        <div class="row align-items-center">
+        <div class="row align-items-center" data-aos="fade-right">
           <!-- Columna izquierda (Fotos) -->
           <div class="col-md-8">
             <div class="row g-3">
@@ -352,5 +355,13 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Inicializa AOS -->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

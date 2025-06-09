@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- icono del sitio -->
     <link
       rel="icon"
@@ -75,8 +78,8 @@
 
       <!-- Titulo -->
       <div class="texto-header">
-        <h1>DIRECCION</h1>
-        <p>Estrategicamente ubicado, a metros de la avenida principal</p>
+        <h1 data-aos="zoom-in">DIRECCION</h1>
+        <p data-aos="zoom-in">Estrategicamente ubicado, a metros de la avenida principal</p>
       </div>
     </header>
 
@@ -84,7 +87,7 @@
     <main>
       <!-- seccion de mapa  -->
       <section
-        class="direccion-contacto container my-5 animate__animated animate__backInUp"
+        class="direccion-contacto container my-5" data-aos="fade-up"
       >
         <div class="row">
           <!-- Columna izquierda -->
@@ -133,5 +136,13 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Inicializa AOS -->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
