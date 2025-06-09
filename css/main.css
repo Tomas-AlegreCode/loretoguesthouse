@@ -373,12 +373,73 @@ footer img {
     margin-left: 15px;
     margin-right: 15px;
   }
-}
-/* Márgenes en lista de instalaciones */
-@media (max-width: 767.98px) {
   .lista-instalaciones ul {
     padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
+  .card-img-top {
+    height: 140px;
+  }
+  .container,
+  .container-fluid,
+  .direccion-contacto,
+  .map-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .direccion-contacto .row {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .direccion-contacto .col-md-6 {
+    max-width: 100%;
+  }
+  .texto-header h1,
+  .texto-section2 h2,
+  .texto-section4 h2 {
+    font-size: 2rem;
+    margin-top: 32px;
+  }
+  .texto-section1 p,
+  .texto-header p {
+    font-size: 1.8rem;
+    margin-top: 32px;
+  }
+  .logo-header {
+    margin-top: 32px;
+  }
+  .logo-header img {
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin-top: 0px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  /* Botón (btn-group) más abajo */
+  .btn-group {
+    margin-top: 0px !important;
+  }
+  /* Texto del header más grande */
+  .texto-header h1 {
+    font-size: 2.8rem !important;
+    margin-top: 32px;
+  }
+  .texto-header p {
+    font-size: 1.8rem !important;
+    margin-top: 24px;
+  }
+  /* Imagen del header más corta (¡CUIDADO! Esto puede achicar headers en todas las páginas) */
+  /* Si solo querés esto en una página, usá una clase más específica */
+  /*
+  .header-img,
+  .header-image {
+    min-height: 100px !important;
+    height: 100px !important;
+    max-height: 100px !important;
+  }
+  */
 }
 /* --- MENÚ HAMBURGUESA (btn-group) --- */
 .btn-group {
@@ -429,11 +490,6 @@ footer img {
   height: 100%;
 }
 
-@media (max-width: 767.98px) {
-  .card-img-top {
-    height: 140px;
-  }
-}
 /* --- SECCIONES Y CONTENEDORES --- */
 @media (max-width: 767.98px) {
   .container,
@@ -444,52 +500,12 @@ footer img {
     margin-right: 0 !important;
   }
 }
-/* --- COLUMNAS EN SECCIONES DE CONTACTO Y MAPA --- */
-@media (max-width: 767.98px) {
-  .direccion-contacto .row {
-    flex-direction: column;
-    min-height: auto;
-  }
-  .direccion-contacto .col-md-6 {
-    max-width: 100%;
-  }
-}
-/* --- TEXTO HEADER Y SECCIONES --- */
-@media (max-width: 767.98px) {
-  .texto-header h1,
-  .texto-section2 h2,
-  .texto-section4 h2 {
-    font-size: 2rem;
-    margin-top: 32px;
-  }
-  .texto-section1 p,
-  .texto-header p {
-    font-size: 1.8rem;
-    margin-top: 32px;
-  }
-}
-/* --- LOGO HEADER --- */
-@media (max-width: 767.98px) {
-  .logo-header {
-    margin-top: 32px;
-  }
-  .logo-header img {
-    max-width: 200px !important;
-    max-height: 200px !important;
-    margin-top: 32px;
-  }
-}
 /* --- TITULOS h2 --- */
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
 }
 
-@media (max-width: 767.98px) {
-  h2 {
-    font-size: 2rem;
-  }
-}
 /* --- AJUSTES PARA PANTALLAS GRANDES --- */
 @media (min-width: 992px) {
   .texto-section1 h2,
@@ -501,7 +517,9 @@ h2 {
   }
   .texto-section1 p,
   .texto-section2 p,
-  .texto-section4 p .parrafo-areas-comunes p .parrafo-principal {
+  .texto-section4 p,
+  .parrafo-areas-comunes p,
+  .parrafo-principal {
     font-size: 2rem !important;
   }
   .texto-quienes-somos h2,
@@ -515,34 +533,6 @@ h2 {
   .texto-quienes-somos .parrafo-mision,
   .texto-quienes-somos .parrafo-vision {
     font-size: 2rem !important;
-  }
-}
-@media (max-width: 767.98px) {
-  /* Logo más grande */
-  .logo-header img {
-    max-width: 200px !important;
-    max-height: 200px !important;
-    margin-top: 0px;
-  }
-  /* Botón (btn-group) más abajo */
-  .btn-group {
-    margin-top: 0px !important;
-  }
-  /* Texto del header más grande */
-  .texto-header h1 {
-    font-size: 2.8rem !important;
-    margin-top: 32px;
-  }
-  .texto-header p {
-    font-size: 1.8rem !important;
-    margin-top: 24px;
-  }
-  /* Imagen del header más corta */
-  .header-img,
-  .header-image {
-    min-height: 100px !important;
-    height: 100px !important;
-    max-height: 100px !important;
   }
 }
 /* --- HAMBURGUESA --- */
@@ -565,6 +555,12 @@ h2 {
     margin-top: 0;
     align-self: center;
     position: static;
+    order: 2;
+  }
+  .texto-header {
+    order: 3;
+    width: 100%;
+    text-align: center;
   }
 }
 .texto-principal {
@@ -637,7 +633,7 @@ h2 {
 
 .titulo-instalaciones h2 {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5em;
 }
 
@@ -690,11 +686,6 @@ h2 {
 }
 
 /* Para destacar el texto contra las imágenes */
-@media (min-width: 768px) {
-  .col-md-4 {
-    padding-right: 3rem !important;
-  }
-}
 /* Efecto al pasar el mouse */
 a[data-lightbox] img {
   transition: transform 0.3s;
