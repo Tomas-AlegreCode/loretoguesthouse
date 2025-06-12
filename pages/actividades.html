@@ -22,6 +22,18 @@
       crossorigin="anonymous"
     />
 
+    <!-- Lightbox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    />
+
+    <!-- jQuery (requerido por Lightbox) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
     <!-- Style -->
     <link rel="stylesheet" href="../css/main.css" />
 
@@ -79,104 +91,247 @@
       <!-- Titulo -->
       <div class="texto-header">
         <h1 data-aos="zoom-in">ACTIVIDADES</h1>
-        <p data-aos="zoom-in">Las mejores propuestas para que disfutes al maximo tu estadia</p>
+        <p data-aos="zoom-in">
+          Las mejores propuestas para que disfutes al maximo tu estadia
+        </p>
       </div>
     </header>
     <!-- principal -->
     <main>
-      <div class="activity-card">
-        <img
-          src="../img/paseo-en-botes.jpg"
-          class="activity-img"
-          alt="Paseo en lancha"
-        />
-        <div class="activity-body">
-          <h3><i class="fas fa-ship me-2"></i> Navegación al Atardecer</h3>
-          <p>
-            Recorrido de 2 horas por los canales principales con avistaje de
-            <strong>lobitos de río, yacarés y aves acuáticas</strong>. Incluye
-            guía baqueano y refrigerio local.
-          </p>
-          <ul class="activity-details">
-            <li><i class="fas fa-clock"></i> Duración: 2.5 horas</li>
-            <li>
-              <i class="fas fa-money-bill-wave"></i> $8.500 ARS por persona
-            </li>
-            <li><i class="fas fa-binoculars"></i> Dificultad: Baja</li>
-          </ul>
-          <button class="btn btn-eco">Reservar esta experiencia</button>
+      <div class="container py-5" data-aos="fade-right">
+        <div class="row align-items-center">
+          <!-- Columna izquierda (Fotos) -->
+          <div class="col-md-8">
+            <div class="row g-3">
+              <!-- gutter (espacio) entre fotos -->
+              <!-- Foto principal (grande) -->
+              <div class="col-12">
+                <a
+                  href="../img/actividades/portal-san-antonio.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/actividades/portal-san-antonio.jpeg"
+                    class="img-fluid rounded shadow-lg"
+                    alt="Foto principal de la habitación Yetapa"
+                    style="height: 400px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
+
+              <!-- Fotos secundarias -->
+              <div class="col-md-6">
+                <a
+                  href="../img/actividades/paseo-lancha.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/actividades/paseo-lancha.jpeg"
+                    class="img-fluid rounded shadow"
+                    alt="Fotografía de un paseo en lancha en los esteros"
+                    style="height: 200px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a
+                  href="../img/actividades/pajarito-3.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/actividades/pajarito-3.jpeg"
+                    class="img-fluid rounded shadow"
+                    alt="Fotografía de un ave llamado tijereta en los esteros"
+                    style="height: 200px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha (Texto) -->
+          <div class="col-md-4 mt-4 mt-md-0">
+            <h2 class="fw-bold text-primary">
+              Portal San Antonio - Aventura Ibera
+            </h2>
+            <p class="mt-3 text-muted">
+              Guia interpretativo, observacion de aves, recorrido por
+              <strong>Aventura Ibera.</strong> <br />Estero Bola, seguro,
+              desayuno o merienda, traslado. <br />Excursion en lancha.
+              <br />Duracion: 3 horas <br />
+              Pack de 2 a 6 personas. Grupos
+            </p>
+            <!-- Botón WhatsApp -->
+            <a
+              href="https://wa.me/5493781491705?text=Hola%20Loreto%20Guest%20House,%20quisiera%20más%20información"
+              target="_blank"
+              class="whatsapp-btn"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>Reserva ahora</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="activity-card">
-        <img
-          src="../img/paseo-en-botes.jpg"
-          class="activity-img"
-          alt="Paseo en lancha"
-        />
-        <div class="activity-body">
-          <h3><i class="fas fa-ship me-2"></i> Navegación al Atardecer</h3>
-          <p>
-            Recorrido de 2 horas por los canales principales con avistaje de
-            <strong>lobitos de río, yacarés y aves acuáticas</strong>. Incluye
-            guía baqueano y refrigerio local.
-          </p>
-          <ul class="activity-details">
-            <li><i class="fas fa-clock"></i> Duración: 2.5 horas</li>
-            <li>
-              <i class="fas fa-money-bill-wave"></i> $8.500 ARS por persona
-            </li>
-            <li><i class="fas fa-binoculars"></i> Dificultad: Baja</li>
-          </ul>
-          <button class="btn btn-eco">Reservar esta experiencia</button>
+      <!-- Circuito guiado che gente cuera -->
+      <div class="container py-5" data-aos="fade-up">
+        <div class="row align-items-center">
+          <!-- Columna izquierda (Texto) -->
+          <div class="col-md-4 order-md-1 order-2">
+            <!-- Cambio de orden -->
+            <h2 class="fw-bold text-primary">Circuito Guiado Che Gente Cuera</h2>
+            <p class="mt-3 text-muted">
+            Guia interpretativo, circuito historico, cultural, religioso.
+            Lugares y personas emblematicas de las canciones de
+            <strong>Mario Bofill</strong>, seguro, refrigerio. <br />Excursion
+            vehicular, caminata.
+            <br>Duracion: 1 hora.
+            <br>Pack de 2 personas. Grupos.
+            </p>
+            <!-- Botón WhatsApp -->
+            <a
+              href="https://wa.me/5493781491705?text=Hola%20Loreto%20Guest%20House,%20quisiera%20más%20información"
+              target="_blank"
+              class="whatsapp-btn"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>Reserva ahora</span>
+            </a>
+          </div>
+
+          <!-- Columna derecha (Fotos) -->
+          <div class="col-md-8 order-md-2 order-1 mb-4 mb-md-0">
+            <!-- Cambio de orden -->
+            <div class="row g-3">
+              <!-- Foto principal (grande) -->
+              <div class="col-12">
+                <a
+                  href="../img/actividades/museo-bofill.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/actividades/museo-bofill.jpeg"
+                    class="img-fluid rounded shadow-lg"
+                    alt="fotografia del interior del Museo Artistico Mario Bofill"
+                    style="height: 400px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
+
+              <!-- Fotos secundarias -->
+              <div class="col-md-6">
+                <a
+                  href="../img/actividades/mario-bofill.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/actividades/mario-bofill.jpeg"
+                    class="img-fluid rounded shadow"
+                    alt="Fotografia de la estatua de Mario Bofill"
+                    style="height: 200px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a
+                  href="../img/actividades/chamame.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/actividades/chamame.jpeg"
+                    class="img-fluid rounded shadow"
+                    alt="Musicos a la orilla del estero tocando chamame"
+                    style="height: 200px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="activity-card">
-        <img
-          src="../img/paseo-en-botes.jpg"
-          class="activity-img"
-          alt="Paseo en lancha"
-        />
-        <div class="activity-body">
-          <h3><i class="fas fa-ship me-2"></i> Navegación al Atardecer</h3>
-          <p>
-            Recorrido de 2 horas por los canales principales con avistaje de
-            <strong>lobitos de río, yacarés y aves acuáticas</strong>. Incluye
-            guía baqueano y refrigerio local.
-          </p>
-          <ul class="activity-details">
-            <li><i class="fas fa-clock"></i> Duración: 2.5 horas</li>
-            <li>
-              <i class="fas fa-money-bill-wave"></i> $8.500 ARS por persona
-            </li>
-            <li><i class="fas fa-binoculars"></i> Dificultad: Baja</li>
-          </ul>
-          <button class="btn btn-eco">Reservar esta experiencia</button>
-        </div>
-      </div>
+      <!-- Circuito Guiado Loreto-->
+      <div class="container py-5" data-aos="fade-right">
+        <div class="row align-items-center">
+          <!-- Columna izquierda (Fotos) -->
+          <div class="col-md-8">
+            <div class="row g-3">
+              <!-- gutter (espacio) entre fotos -->
+              <!-- Foto principal (grande) -->
+              <div class="col-12">
+                <a
+                  href="../img/exteriores/muelle.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/exteriores/muelle.jpeg"
+                    class="img-fluid rounded shadow-lg"
+                    alt="Habitación Principal"
+                    style="height: 400px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
 
-      <div class="activity-card">
-        <img
-          src="../img/paseo-en-botes.jpg"
-          class="activity-img"
-          alt="Paseo en lancha"
-        />
-        <div class="activity-body">
-          <h3><i class="fas fa-ship me-2"></i> Navegación al Atardecer</h3>
-          <p>
-            Recorrido de 2 horas por los canales principales con avistaje de
-            <strong>lobitos de río, yacarés y aves acuáticas</strong>. Incluye
-            guía baqueano y refrigerio local.
-          </p>
-          <ul class="activity-details">
-            <li><i class="fas fa-clock"></i> Duración: 2.5 horas</li>
-            <li>
-              <i class="fas fa-money-bill-wave"></i> $8.500 ARS por persona
-            </li>
-            <li><i class="fas fa-binoculars"></i> Dificultad: Baja</li>
-          </ul>
-          <button class="btn btn-eco">Reservar esta experiencia</button>
+              <!-- Fotos secundarias -->
+              <div class="col-md-6">
+                <a
+                  href="../img/actividades/loreto.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/actividades/loreto.jpeg"
+                    class="img-fluid rounded shadow"
+                    alt="Fotografia de una escultura con la palabra Loreto"
+                    style="height: 200px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a
+                  href="../img/actividades/religioso.jpeg"
+                  data-lightbox="-"
+                  data-title="-"
+                >
+                  <img
+                    src="../img/actividades/religioso.jpeg"
+                    class="img-fluid rounded shadow"
+                    alt="Fotografia del interior de una capilla en una casa"
+                    style="height: 200px; width: 100%; object-fit: cover"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha (Texto) -->
+          <div class="col-md-4 mt-4 mt-md-0">
+            <h2 class="fw-bold text-primary">Circuito Guiado Loreto Pora</h2>
+            <p class="mt-3 text-muted">
+            Guia interpretativo, <strong>circuito natural</strong>, miradores,
+            capillas domiciliarias, seguro, refrigerio, traslado. <br />Exursion
+            vehicular.
+            <br> Duracion: 2 horas. <br />
+            <br> Pack de 2 a 4 personas. Grupos
+            </p>
+            <!-- Botón WhatsApp -->
+            <a
+              href="https://wa.me/5493781491705?text=Hola%20Loreto%20Guest%20House,%20quisiera%20más%20información"
+              target="_blank"
+              class="whatsapp-btn"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>Reserva ahora</span>
+            </a>
+          </div>
         </div>
       </div>
     </main>
@@ -189,7 +344,10 @@
           reservados.
         </p>
         <a href="../index.html">
-        <img src="../img/logos/logo-blanco.png" alt="logo loreto guest house" />
+          <img
+            src="../img/logos/logo-blanco.png"
+            alt="logo loreto guest house"
+          />
         </a>
       </div>
     </footer>
