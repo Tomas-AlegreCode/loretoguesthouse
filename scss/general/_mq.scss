@@ -125,6 +125,33 @@
   height: 100%;
 }
 
+@media (max-width: 767.98px) {
+  .ibera-card,
+  .cuera-card,
+  .loreto-card,
+  .jabiru-card,
+  .yetapa-card,
+  .martin-card {
+    text-align: center;
+  }
+  .card h2,
+  .card h3,
+  .card-title,
+  .card p {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
+  .card .btn,
+  .card button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
+  }
+}
+
 /* --- SECCIONES Y CONTENEDORES --- */
 @media (max-width: 767.98px) {
   .container,
