@@ -759,6 +759,18 @@ ul {
   line-height: 2rem;
 }
 
+.foto-kuni {
+  width: 200px;
+  height: 200px;
+  max-width: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  object-fit: cover;
+}
+
 .activity-card {
   border-radius: 10px;
   overflow: hidden;

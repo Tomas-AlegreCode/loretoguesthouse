@@ -30,3 +30,14 @@ ul {
   line-height: 2rem;
 }
 
+.foto-kuni {
+  width: 200px;         // Ajusta el tamaño según prefieras
+  height: 200px;        // Igual al width para círculo perfecto
+  max-width: none;
+  border-radius: 50%;   // Círculo perfecto
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  display: block;
+  margin-left: 0;       // Alinea a la izquierda
+  margin-right: 0;
+  object-fit: cover;    // Mantiene la imagen proporcionada y centrada
+}
