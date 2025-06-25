@@ -589,6 +589,12 @@ h2 {
     text-align: center;
   }
 }
+@media (max-width: 767.98px) {
+  .parrafo-principal {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+}
 .texto-principal {
   display: flex;
   flex-direction: column;
